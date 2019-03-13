@@ -1,5 +1,8 @@
 from django.conf.urls import url
+from django.contrib import admin
 from django.contrib.auth.decorators import login_required
+
+from . import views
 
 from django.utils import timezone
 from django.views.generic import DetailView, ListView, UpdateView
@@ -9,9 +12,7 @@ from mydrugstore.views import UsuariCreate, ProducteCreate, ProveedorCreate, Cat
                               EstocCreate
 
 urlpatterns = [
-    url(r'^$',
-        ListView.as_view(
-            queryset= Producte.objects.filter(date_lte = timezone.now()).order by('-date')[:5],
-            context_object_name='latest_restaurant_list',
-        ))
+    url(r'^admin/', admin.site.urls),
+    url(r'^firsttemplate/', views.index),
 ]
+
