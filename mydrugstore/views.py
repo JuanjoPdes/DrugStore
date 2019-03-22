@@ -9,9 +9,28 @@ from django.template import loader
 
 
 # our view which is a function named index
+
+"""class ProductDetail(DetailView):
+    model = Producte
+    template_name ='templates/product.html'
+
+    def get_context_data(self,**kwargs):
+        context = super(RestaurantDetail, self).get_context_data(**kwargs)
+        context['RATING_CHOICES'] = RestaurantReview.RATING_CHOICES
+        return context
+    """
+
+
 def index(request):
     # getting our template
     template = loader.get_template('index.html')
+
+    # rendering the template in HttpResponse
+    return HttpResponse(template.render())
+
+def oferts(request):
+    # getting our template
+    template = loader.get_template('oferts.html')
 
     # rendering the template in HttpResponse
     return HttpResponse(template.render())

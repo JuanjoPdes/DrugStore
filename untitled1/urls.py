@@ -21,5 +21,5 @@ from mydrugstore import views
 
 urlpatterns = [
     path(r'^admin/', admin.site.urls),
-    url(r'^mydrugstore/', include(('templates.urls', 'mydrugstore'), namespace='drugstore')),
+    path('', include('mydrugstore.urls')),
 ]
