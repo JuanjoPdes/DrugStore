@@ -20,10 +20,5 @@ from django.urls import path, include
 from mydrugstore import views
 
 urlpatterns = [
-    path(r'^admin/', admin.site.urls),
-    url(r'^mydrugstore/', include(('mydrugstore.urls', 'mydrugstore'), namespace='mydrugstore')),
-    url(r'^home/', include(('mydrugstore.urls', 'home'), namespace='home')),
-    url(r'^catalogue/', include(('mydrugstore.urls', 'catalogue'), namespace='catalogue')),
-    url(r'^product/', include(('mydrugstore.urls', 'product'), namespace='product')),
-
+    path(r'^admin/', admin.site.urls)
 ]

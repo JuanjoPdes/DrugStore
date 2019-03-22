@@ -13,6 +13,9 @@ from mydrugstore.views import UsuariCreate, ProducteCreate, ProveedorCreate, Cat
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
+    url(r'^$', views.home),
+    url(r'^catalogue', views.catalogue),
+    url(r'^oferts', views.oferts),
+    url(r'^product', views.product),
 ]
 
