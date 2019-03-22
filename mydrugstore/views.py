@@ -15,3 +15,27 @@ def index(request):
 
     # rendering the template in HttpResponse
     return HttpResponse(template.render())
+
+
+def home(request):
+    # getting our template
+    template = loader.get_template('home.html')
+
+    # rendering the template in HttpResponse
+    return HttpResponse(template.render())
+
+
+def catalogue(request):
+    # getting our template
+    template = loader.get_template('catalogue.html')
+
+    # rendering the template in HttpResponse
+    return HttpResponse(template.render())
+
+
+def product(request):
+    # getting our template
+    template = loader.get_template('product.html')
+
+    # rendering the template in HttpResponse
+    return HttpResponse(template.render())
